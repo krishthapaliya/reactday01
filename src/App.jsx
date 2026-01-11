@@ -1,15 +1,17 @@
-import Hero from "./component/Hero"
-import Navbar from "./component/Navbar"
-import Featured from "./component/Featured"
 
-function App(){
-  return(
-    <div className="mx-20">
-      <Navbar/>
-      <Hero/>
-      <Featured/>
-    </div>
-  )
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Practise from "./pages/Practise";
+import Students from "./pages/Students";
+
+function App() {
+  return (
+      <Routes>
+         <Route path="/" element={<Home />} />
+         <Route path="/students" element={<Students />} />
+         <Route path="/hooks" element={<Practise />} />
+       </Routes>
+  );
 }
 
-export default App
+export default App;
